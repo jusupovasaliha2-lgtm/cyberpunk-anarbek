@@ -10,7 +10,7 @@ $about-accent-color: #3db4d6;
   &__inner {
     max-width: 1920px;
     margin: 0 auto;
-    padding: 68px 0 0 320px;
+    padding: 68px 0 0 100px;
   }
 
 
@@ -135,6 +135,7 @@ $about-accent-color: #3db4d6;
 
 @media (max-width: 768px) {
   .about {
+    
     &__inner {
       padding: 12px 16px 0; 
     }
