@@ -1,0 +1,273 @@
+
+$hp-title-font: 'Archangelsk', Arial, sans-serif;
+$hp-text-font: 'Roboto', sans-serif;
+$hp-bg-color: #f8f100;
+
+.hp {
+  background: $hp-bg-color;
+
+  &__inner {
+    display: flex;
+    gap: 32px;
+    box-sizing: border-box;
+    max-width: 1280px;
+    height: 676px;
+    margin: 0 auto;
+  }
+
+  &__left {
+    width: 624px;
+    padding-top: 66px; 
+  }
+
+  &__monitor {
+    display: block;
+    width: 624px;
+    height: 430px;
+    object-fit: contain;
+  }
+
+  &__logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 28px;
+  }
+
+  &__logo {
+    display: block;
+    flex-shrink: 0;
+
+    &--hp {
+      width: 82px;
+      height: 82px;
+    }
+
+    &--cross {
+      width: 92px;
+      height: 28px;
+    }
+
+    &--cyberpunk {
+      width: 317px;
+      height: 70px;
+    }
+  }
+
+  &__right {
+    width: 624px;
+    padding-top: 70px; 
+  }
+
+  &__title {
+    margin: 0;
+    font-family: $hp-title-font;
+    font-size: 48px;
+    line-height: 63px;
+    font-weight: 400;
+    color: #000;
+  }
+
+  &__text {
+    width: 630px;
+    margin: 26px 0 0;
+    font-family: $hp-text-font;
+    font-size: 18px;
+    line-height: 33px;
+    font-weight: 400;
+    color: #000;
+  }
+
+  &__list {
+    margin: 18px 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    height: 30px;
+    margin-bottom: 16px;
+    font-family: $hp-text-font;
+    font-size: 18px;
+    color: #000;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__icon {
+    display: block;
+    flex-shrink: 0;
+    width: 30px;
+    height: 30px;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 194px;
+    height: 58px;
+    margin-top: 41px;
+    background: #000;
+    font-family: $hp-text-font;
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+
+
+@media (max-width: 1024px) {
+  .hp {
+    &__inner {
+      height: 799px;
+      padding: 0 36px;
+    }
+
+    &__left {
+      flex: 1;
+      width: auto;
+      min-width: 0;
+      padding-top: 114px;
+    }
+
+    &__right {
+      flex: 1;
+      width: auto;
+      min-width: 0;
+      padding-top: 75px; 
+    }
+
+    &__monitor {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 624 / 430;
+    }
+
+    &__logos {
+      flex-direction: column;
+      gap: 20px;
+      margin-top: 28px;
+    }
+
+    &__logo--hp {
+      width: 80px;
+      height: 80px;
+    }
+
+    &__text {
+      width: 100%;
+      margin-top: 23px;
+      line-height: 34px;
+    }
+
+    &__list {
+      margin-top: 14px;
+    }
+
+    &__item {
+      margin-bottom: 18px; 
+    }
+
+    &__button {
+      margin-top: 40px;
+    }
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .hp {
+    &__inner {
+      flex-direction: column;
+      gap: 0;
+      height: auto;
+      padding: 80px 12px 26px; 
+    }
+
+    &__left,
+    &__right {
+      flex: none;
+      width: 100%;
+      padding-top: 0;
+    }
+
+    &__monitor {
+      width: calc(100% + 24px);
+      margin: 0 -12px;
+    }
+
+    &__logos {
+      flex-direction: row;
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    &__logo {
+      &--hp {
+        width: 46px;
+        height: 46px;
+      }
+
+      &--cross {
+        width: 48px;
+        height: 16px;
+      }
+
+      &--cyberpunk {
+        width: 171px;
+        height: 39px;
+      }
+    }
+
+    &__title {
+      margin-top: 40px;
+      font-size: 24px;
+      line-height: 32px;
+    }
+
+    &__text {
+      margin-top: 26px;
+      font-size: 16px;
+      line-height: 33px;
+    }
+
+    &__list {
+      margin-top: 18px;
+    }
+
+    &__item {
+      align-items: flex-start;
+      gap: 16px;
+      height: auto;
+      margin-bottom: 12px;
+      font-size: 16px;
+      line-height: 24px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &__icon {
+      width: 24px;
+      height: 24px;
+    }
+
+    &__button {
+      width: 184px;
+      height: 60px;
+      margin-top: 32px;
+      font-size: 16px;
+    }
+  }
+}

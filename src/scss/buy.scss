@@ -1,0 +1,179 @@
+$buy-title-font: 'Archangelsk', Arial, sans-serif;
+$buy-text-font: 'Roboto', sans-serif;
+$buy-accent-color: #3db4d6;
+
+.buy {
+  background: #000;
+
+  &__inner {
+    display: flex;
+    gap: 32px;
+    max-width: 1920px;
+    height: 717px;
+    margin: 0 auto;
+  }
+
+  &__image {
+    display: block;
+    flex-shrink: 0;
+    width: 944px;
+    height: 717px;
+    object-fit: cover;
+  }
+
+  &__content {
+    padding-top: 75px;
+  }
+
+  &__title {
+    margin: 0;
+    font-family: $buy-title-font;
+    font-size: 48px;
+    line-height: 58px;
+    font-weight: 400;
+    color: #fff;
+  }
+
+  &__subtitle {
+    margin: 31px 0 0;
+    font-family: $buy-text-font;
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 700;
+    color: $buy-accent-color;
+
+    &--platforms {
+      margin-top: 73px;
+    }
+  }
+
+  &__list {
+    margin: 20px 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    height: 24px;
+    margin-bottom: 23px;
+    font-family: $buy-text-font;
+    font-size: 18px;
+    color: #fff;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+
+  &__icon {
+    display: block;
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+  }
+
+
+  &__platforms {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    grid-template-rows: 30px 45px;
+    row-gap: 49px;
+    align-items: center;
+    margin-top: 28px;
+  }
+
+  &__platform {
+    display: block;
+  }
+
+  &__logo {
+    display: block;
+
+    &--pc {
+      width: 58px;
+      height: 30px;
+    }
+
+    &--xbox {
+      width: 178px;
+      height: 31px;
+    }
+
+    &--stadia {
+      width: 58px;
+      height: 45px;
+    }
+
+    &--ps4 {
+      width: 163px;
+      height: 30px;
+    }
+  }
+}
+
+
+
+@media (max-width: 1024px) {
+  .buy {
+    &__image {
+      width: 334px;
+    }
+  }
+}
+
+
+@media (max-width: 768px) {
+  .buy {
+    &__inner {
+      flex-direction: column;
+      gap: 0;
+      height: auto;
+    }
+
+    &__image {
+      width: 100%;
+      height: 195px;
+    }
+
+    &__content {
+      padding: 0 14px 72px;
+    }
+
+    &__title {
+      font-size: 24px;
+      line-height: 30px;
+    }
+
+    &__subtitle {
+      margin-top: 70px;
+      font-size: 22px;
+      line-height: 26px;
+
+      &--platforms {
+        margin-top: 30px;
+      }
+    }
+
+    &__item {
+      align-items: flex-start;
+      height: auto;
+      margin-bottom: 12px;
+      font-size: 16px;
+      line-height: 22px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &__platforms {
+      grid-template-columns: 114px 1fr;
+      row-gap: 45px;
+      margin-top: 34px;
+    }
+  }
+}

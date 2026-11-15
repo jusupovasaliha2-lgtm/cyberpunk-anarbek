@@ -1,0 +1,141 @@
+$footer-text-font: 'Roboto', sans-serif;
+$footer-links-bg-phone: #e0e0e0; 
+
+.footer {
+  &__top {
+    background: #fff;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1280px;
+    height: 100px;
+    margin: 0 auto;
+  }
+
+  &__logos {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  &__logo {
+    display: block;
+
+    &--cyberpunk {
+      width: 300px;
+      height: 66px;
+    }
+
+    &--cdpr {
+      width: 176px;
+      height: 75px;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+
+  &__link {
+    font-family: $footer-text-font;
+    font-size: 18px;
+    line-height: 24px;
+    color: #000;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__bottom {
+    box-sizing: border-box;
+    height: 60px;
+    padding-top: 12px;
+    background: #000;
+    text-align: center;
+  }
+
+  &__copy {
+    margin: 0;
+    font-family: $footer-text-font;
+    font-size: 10px;
+    line-height: 12px;
+    color: #fff;
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .footer {
+    &__inner {
+      padding: 0 36px;
+    }
+
+    &__logos {
+      gap: 32px;
+    }
+
+    &__logo--cyberpunk {
+      width: 296px;
+      height: 65px;
+    }
+
+    &__bottom {
+      height: 40px;
+    }
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .footer {
+    &__inner {
+      flex-direction: column;
+      justify-content: flex-start;
+      height: auto;
+      padding: 0;
+    }
+
+    &__logos {
+      flex-direction: column;
+      gap: 36px;
+      padding: 35px 0 23px;
+    }
+
+    &__logo {
+      &--cyberpunk {
+        width: 180px;
+        height: 40px;
+      }
+
+      &--cdpr {
+        width: 108px;
+        height: 46px;
+      }
+    }
+
+    &__nav {
+      flex-direction: column;
+      gap: 13px;
+      width: 100%;
+      padding: 26px 0;
+      background: $footer-links-bg-phone;
+      text-align: center;
+    }
+
+    &__link {
+      font-size: 16px;
+    }
+
+    &__bottom {
+      padding-top: 10px;
+    }
+  }
+}
